@@ -87,3 +87,11 @@ echo -n 'senha' | base64
 kubectl port-forward service/mongo-express-service 8081:8081
 kubectl patch svc mongo-express-service -p '{"spec":{"externalIPs":["192.168.15.42"]}}'
 ```
+
+Para instalar o kubens para definir o namespace padrão.
+```shell
+sudo snap install kubectx --classic
+```
+
+Para instalar e criar o pod k8s-nginx-ingress-controller.
+minikube addons enable ingress
